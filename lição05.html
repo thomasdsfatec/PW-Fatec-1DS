@@ -1,0 +1,104 @@
+<title>lição-05</title>
+<fieldset>
+    <h3> 5- De exemplo de os tipos de funções:</h3>
+    <strong>a-</strong><a>Função Nomeada é possível criar funções apartir do Nome que você usa para inserir a função em
+        uma célula. datas e horários exatas </a>
+    <br>
+    <br>
+    <script type="text/javascript">
+        function data() {
+
+            var d = new Date();
+            document.write("data e hora: " + d.toLocaleString());
+        }
+        data(); // esta linha faz executar a função
+    </script>
+
+</fieldset>
+
+<fieldset>
+    <strong>b-</strong><a>Uma Função Literal como o proprio nome ja diz, é literal, abrangindo todas as maneiras de usar
+        uma variavel.</a>
+
+    <h4>temperatura </h4>
+
+    <p id="temperatura"></p>
+
+    <script>
+        document.getElementById("temperatura").innerHTML =
+            "A temperatura é de " + toCelsius(77) + "C°";
+
+        function toCelsius(fahrenheit) {
+            return (5 / 9) * (fahrenheit - 32);
+        } 
+    </script>
+</fieldset>
+
+<fieldset>
+    <strong>c-</strong><a>Função Nomeada com argumento(parâmetro) e retorno; Quando o JavaScript atinge
+        uma returninstrução, a função para de ser executada. Ex: Calcula o produto de dois
+        números e retorne o resultado</a>
+    <br>
+    <br>
+    <a> 7*7 = </a>
+    <a id="informar"></a>
+    <script>
+        var x = myFunction(7, 7);
+        document.getElementById("informar").innerHTML = x;
+
+        function myFunction(a, b) {
+            return a * b;
+        }
+    </script>
+</fieldset>
+
+<fieldset>
+    <strong>d-</strong><a>construtor é um método especial para criar e inicializar objetos criados dentro de uma classe,
+        substitui um objeto.</a>
+    <br>
+    <br>
+    <strong> eu + minnha idade</strong>
+    <p id="idade"></p>
+    <script>
+
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+        }
+
+        const my = new Person("John", "Doe", 16, "blue");
+
+        document.getElementById("idade").innerHTML =
+            "tenho " + my.age + " anos."; 
+    </script>
+</fieldset>
+
+<fieldset>
+    <strong>e-</strong><a>Função de Flecha(Arrow functions) permite escrever uma funcao mais curta.</a>
+
+    <!DOCTYPE html>
+    <html>
+
+    <body>
+
+        <p>exemplo:</p>
+
+        <p id="resposta"></p>
+
+        <script>
+
+            let ola = "";
+
+            ola = function () {
+                return "olá";
+            }
+
+            document.getElementById("resposta").innerHTML = ola();
+        </script>
+
+    </body>
+
+    </html>
+
+</fieldset>

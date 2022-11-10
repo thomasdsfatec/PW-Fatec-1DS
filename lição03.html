@@ -1,0 +1,135 @@
+<title>Lição-03</title>
+<fieldset>
+  <h3>3-De exemplo das seguintes formas de trabalhar com DOM(Document Object Model), e explique:</h3>
+  <script>
+    function MudaCor(Cores) {
+      var x = document.getElementById("cor");
+      x.style.color = Cores;
+    }
+  </script>
+  <a><strong>a-</strong>esta representação é feita com o elemento document.getElementByld(id = cor),
+    usando a função MudaCor, é possiver chamar o id "cor" atravez da variavel declarada x =
+    document.getElementById("cor");, com
+    cores em buttons, e assim mudando o texto.</a>
+
+  <p id="cor">Este texto mudara de cor ao clicar em um dos botões</p>
+
+  <button onclick="MudaCor('red');">Vermelho</button>
+  <button onclick="MudaCor('blue');">Azul</button>
+</fieldset>
+
+<br>
+<br>
+
+<fieldset>
+  <a><strong>b-</strong>Basicamente, o document.getElementsByTagName() é usado para obter um elemento a partir de um
+    nome
+    de tag, aqui ele esta programado para ao clicar no botao de onclick e mudar a linha 5 da lista para laranja.
+    chamando o ul de listagem e alternando o texto da linha 5</a>
+
+  <!DOCTYPE html>
+  <html>
+
+  <ul>
+    <p>1-açucar</p>
+    <p>2-banana</p>
+    <p>3-arroz</p>
+    <p>4-feijao</p>
+    <p>5-pipoca</p>
+    <p>6-leite</p>
+  </ul>
+
+  <p>clique para alterar o texto na quinta linha.</p>
+  <button onclick="myFunction()">Mudar</button>
+
+  <script>
+    function myFunction() {
+      const list = document.getElementsByTagName("UL")[0];
+      list.getElementsByTagName("p")[4].innerHTML = "5-laranja";
+    }
+  </script>
+
+  </body>
+
+  </html>
+</fieldset>
+
+<fieldset>
+  <a><strong>c-</strong>O elemento document.getElementsByClassName(); basicamente Retorna um vetor de objetos com todos
+    os
+    elementos filhos que possuem o nome da classe dada.</a>
+
+  <!DOCTYPE html>
+  <html>
+  <style>
+    div {
+      padding: 16px;
+    }
+  </style>
+
+  <body>
+    <div id="contador">
+      <a class="informacao">informação,</a>
+      <a class="informacao">informação,</a>
+      <a class="informacao">informação.</a>
+      <a class="informacao">informação.</a>
+      <a class="informacao">informação.</a>
+      <a class="informacao">informação.</a>
+    </div>
+
+    <p>O numero de informações contidas acima é:</p>
+    <p id="resultado"></p>
+
+    <script>
+      const element = document.getElementById("contador");
+      const nodes = element.getElementsByClassName("informacao");
+      document.getElementById("resultado").innerHTML = nodes.length;
+    </script>
+
+  </body>
+
+  </html>
+
+</fieldset>
+<fieldset>
+  <a><strong>d-</strong>Ja o elemento document.querySelector(); retorna o primeiro elemento encontrado, se
+    quisesse encontrar "h1" por exemplo, basta trocar o "p" para "h1" que ele tornara a encontrar e mudar a cor apenas a
+    cor de titulos h1</a>
+
+  <p>Clique o botão para adicionar um fundo vermelho no primeiro elemento "p" encontrado.</p>
+
+  <button onclick="FuncaoMudarCor()">Clique aqui</button>
+
+  <script>
+    function FuncaoMudarCor() {
+      document.querySelector("p").style.color = "red";
+    }
+  </script>
+  <p>neste caso, a primeira tag "p" paragrafo foi encontrada na questao "a".</p>
+</fieldset>
+
+<fieldset>
+  <a><strong>e-</strong>O querySelector() retorna o primeiro elemento que corresponde a um seletor CSS.
+    Para retornar todas as correspondências (não apenas a primeira),é usado o querySelectorAll() em vez disso.</a>
+
+  <html>
+
+  <body>
+
+    <p>por exemplo, aqui ele selecionara em vermelho tudo que estiver na classe "informação":</p>
+
+    <h2 class="informacao">informacao</h2>
+    <h3 class="informacao">informacao</h3>
+
+    <script>
+      const nodeList = document.querySelectorAll(".informacao");
+      for (let i = 0; i < nodeList.length; i++) {
+        nodeList[i].style.color = "red";
+      }
+    </script>
+
+  </body>
+
+  </html>
+
+</fieldset>

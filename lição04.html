@@ -1,0 +1,91 @@
+<title>Lição-04</title>
+<fieldset>
+    <h3> 4- Descreva e crie exemplos com suas formas diferente eventos no javascript:</h3>
+
+    <a><strong>a-</strong>o onmouseover em poucas palavras, é usado como um hover, executa uma ação ao passar o mause em
+        cima, poderia ser usada para
+        trocar de uma imagem para outra por exemplo</a>
+
+    <html>
+
+    <body>
+
+        <p>adicionando mouse over e mouse oute, é possivel defimir a cor azul para mouse over e preta para out com o
+            onmouse</p>
+
+        <h2 id="mudarCor">eu mudarei para azul</h2>
+
+        <script>
+            document.getElementById("mudarCor").onmouseover = function () {
+                mouseOver()
+            };
+            document.getElementById("mudarCor").onmouseout = function () {
+                mouseOut()
+            };
+
+            function mouseOver() {
+                document.getElementById("mudarCor").style.color = "blue";
+            }
+
+            function mouseOut() {
+                document.getElementById("mudarCor").style.color = "black";
+            }
+        </script>
+
+    </body>
+
+    </html>
+</fieldset>
+<fieldset>
+    <a><strong>b-</strong>o onfucos é um atributo da tag imput, focando ao clicar com o mause, </a>
+
+    <!DOCTYPE html>
+    <html>
+
+    <body>
+
+        <p>A function is triggered when one of the input fields get focus. The function changes the background-color of
+            the input field.</p>
+
+        <input type="text" id="fname" placeholder="Digite seu nome" onfocus="funcao(this.id)"><br>
+
+        <script>
+            function funcao(y) {
+                document.getElementById(y).style.background = "pink";
+            }
+        </script>
+
+    </body>
+
+    </html>
+
+
+
+</fieldset>
+<fieldset>
+    <a><strong>c-</strong>copy, o elemento copy acontece quando um o usuario copia um elemento
+    ao copiar o elemento, é retornada como "texto copiado" no paragrafo separado vazio, apos copiar, esse espaço é preenchido pelo texto.</a>
+    <!DOCTYPE html>
+    <html>
+<style>
+    .button{
+        border: none;
+    }
+</style>
+    <body>
+        <br>
+        <br>
+        <h4 class="button" oncopy="copiar()" value="copie isto.">copie isto :) </h4>
+
+        <p id="P"></p>
+
+        <script>
+            function copiar() {
+                document.getElementById("P").innerHTML = "texto copiado."
+            }
+        </script>
+
+    </body>
+
+    </html>
+</fieldset>
