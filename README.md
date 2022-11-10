@@ -1,1 +1,0 @@
-# ExercicioPW2022FATEC1DS
